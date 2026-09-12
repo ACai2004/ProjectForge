@@ -1,0 +1,45 @@
+# ---- Dependencies ----
+node_modules/
+.pnpm-store/
+
+# ---- Python virtualenv / caches (legacy tooling) ----
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# ---- Environment & local provider configuration ----
+# Real credentials live here; only the placeholder template is published.
+.env
+.env.*
+!.env.example
+
+# ---- Local developer state (per-machine, not a project asset) ----
+.claude/settings.json
+.claude/settings.local.json
+.vscode/
+.idea/
+
+# ---- ProjectForge runtime artifacts (user data) ----
+# The directory is kept in the repository via .gitkeep; its contents are not.
+artifacts/*
+!artifacts/.gitkeep
+
+# ---- Acceptance run residue (transcripts / diagnostics / fixtures) ----
+# Reusable harnesses (gate/*.mjs) stay public; run output does not.
+gate/transcripts/
+gate/diag/
+gate/fixtures/
+
+# ---- Legacy Python prototype (M1) — kept locally, not published ----
+requirement_layer/
+requirements.txt
+
+# ---- OS / editor noise ----
+.DS_Store
+Thumbs.db
+*.swp
+*~
